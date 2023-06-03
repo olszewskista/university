@@ -1,0 +1,207 @@
+$login-color: #065fd4;
+$header-button: #030303;
+$background-color: #f8f8f8;
+$category-hover: #f2f2f2;
+$movie-colors: #e1bbbb, #e1c6bb, #eeeccc, #d7e1bb, #bbe1ca, #bbdce1, #bcbbe1, #d9bbe1;
+
+$count: 1;
+
+@each $color in $movie-colors {
+    .main-movie-section {
+        :nth-child(#{$count}) {
+            .movie-frame {
+                background-color: #{$color};
+            }
+        }
+    }
+    $count: $count+1
+}
+
+body { 
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+    padding: 1em 0;
+    gap: 2rem;
+    .start {
+        display: flex;
+        margin-left: 1rem;
+        button {
+            background-color: white;
+            border: none;
+            margin-right: 10px;
+        }
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            i {
+                color: red;
+            }
+            .name {
+                font-weight: bold;
+                font-size: 25px;
+            }
+            .pl {
+                position: absolute;
+                top: 0;
+                right: -20px;
+                font-size: small;
+            }
+        }
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        width: 100%;
+        input {
+            width: 100%;
+            max-width: 50rem;
+        }
+        button {
+            padding: 0 1rem;
+        }
+    }
+    .end {
+        display: flex;
+        width: max-content;
+        gap: 1rem;
+        margin-right: 1rem;
+        .login {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid blue;
+            > * {
+                color: blue;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+        > * {
+            background-color: white;
+            border: none;
+        }
+    }
+}
+
+div {
+    &#body {
+        display: flex;
+        flex-direction: row;
+    }
+    &#left-section {
+        flex: 1 1 20%;
+        .link-group {
+            ul {
+                list-style: none;
+                border-bottom: 2px solid lightgrey;
+                li {
+                    margin-bottom: 1.5rem;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .header {
+                padding-inline-start: 40px;
+            }
+        }
+        .login-info {
+            padding-inline-start: 40px;
+            border-bottom: 2px solid lightgrey;
+            margin-bottom: 1.5rem;
+            button {
+                display: flex;
+                gap: 1rem;
+                padding: 0.5rem 0.5rem;
+                margin-bottom: 1.5rem;
+                background-color: white;
+                color: #065fd4;
+                border-color: #065fd4;
+                font-size: medium;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+    &#main-section {
+        padding: 1rem;
+        flex: 1 1 80%;
+        background-color: $background-color;
+        :nth-child(3) {
+            .movie {
+                .movie-frame {
+                    background-color: lightgrey;
+                }
+            }
+        }
+    }
+    .buttons {
+        button {
+            &.active {
+                background-color: black;
+                color: white;
+                border-color: black;
+            }
+            background-color: lightgrey;
+            border-radius: 20px;
+            color: black;
+            border-color: rgb(182, 182, 182);
+            border-style: solid;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &.main-movie-section {
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        border-bottom: 2px solid lightgrey;
+        padding-bottom: 2rem;
+        .header {
+            grid-column: span 4;
+        }
+        .movie {
+            display: flex;
+            flex-wrap: wrap;
+            .movie-frame {
+                flex: 1 0 100%;
+                aspect-ratio: 16/9;
+                // background-color: lightblue;
+                margin-bottom: 1rem;
+            }
+            .avatar {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                width: 64px;
+                // background-color: blue;
+                > * {
+                    width: 48px;
+                    height: 48px;
+                    background-color: lightgrey;
+                    border-radius: 24px;
+                }
+            }
+            .movie-info {
+                flex: 1 10;
+                > * {
+                    line-height: 1.5rem;
+                }
+                .title {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

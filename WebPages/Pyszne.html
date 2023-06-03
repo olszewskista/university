@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mikro Pyszne</title>
+    <link rel="stylesheet" href="Pyszne.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><span>Pyszne</span><span>.pl</span></div>
+      <div class="address">
+        <div>Ulica 21/2, 80-100 Gdańsk</div>
+      </div>
+      <div>
+        <button>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <div class="type-section">
+      <div class="buttons">
+        <button class="button-1 active">Dostawa</button>
+        <button class="button-2">Odbiór</button>
+      </div>
+    </div>
+    <div class="category-section">
+      <button class="active">Wszystkie</button>
+      <button>Pizza</button>
+      <button>Kebab</button>
+      <button>Indyjska</button>
+      <button>Włoska</button>
+      <button>Burgery</button>
+      <button>Chińska</button>
+      <button>Sushi</button>
+      <button>Polska</button>
+      <button>Tajska</button>
+      <button>Makarony</button>
+      <button>Pokaż więcej</button>
+    </div>
+    <div class="main-section">
+      <div class="left-main-section">
+        <div class="header">62 restauracje</div>
+        <div>
+          <div class="header">Min. kwota zamówienia</div>
+          <div class="radio-button">
+            <input type="radio" name="min" checked />
+            <label>Pokaż wszystkie (62)</label>
+          </div>
+          <div class="radio-button">
+            <input type="radio" name="min" checked />
+            <label>30,00 zł lub mniej (28)</label>
+          </div>
+          <div class="radio-button">
+            <input type="radio" name="min" checked />
+            <label>50,00 zł lub mniej (51)</label>
+          </div>
+        </div>
+        <div>
+          <div class="header">Oceny restauracji</div>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div>
+          <div class="header">Rabaty i oszczędności</div>
+          <div class="checkbox">
+            <input type="checkbox" name="rabat" checked />
+            <label>Rabaty (4)</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="rabat" checked />
+            <label>Program Pieczątek (32)</label>
+          </div>
+        </div>
+      </div>
+      <div class="right-main-section">
+        <div class="search">
+          <input type="text" name="search" id="search" placeholder="Restauracje i dania" />
+          <button><i class="fas fa-map-marker-alt"></i></button>
+        </div>
+        <div>
+          <div class="header">Zamawiaj z 62 restauracji</div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic"></div>
+            <div class="logo">
+              <div class="name">Nazwa</div>
+            </div>
+            <div class="info">
+              <div class="header">Nazwa Restauracji</div>
+              <div class="description">Pizza, Burgery, Polska</div>
+              <div class="content">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <div>4,6 <span>(1341)</span></div>
+                </div>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <div>30 - 55 min</div>
+                </div>
+                <div>
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>7,00 zł</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

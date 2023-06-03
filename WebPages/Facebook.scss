@@ -1,0 +1,174 @@
+$colors: lightblue, lightcoral, lightsteelblue, lightgreen, lightsalmon, lightslategrey, lightgray, lightpink, lightseagreen;
+$count: 1;
+
+@each $color in $colors {
+  .left .photo:nth-child(#{$count}) {
+    background-color: $color;
+  }
+  $count: $count + 1
+}
+
+body {
+  background-color: rgb(28, 30, 33);
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: lightgrey;
+  margin: 1rem 0;
+  > * {
+    max-width: 1920px;
+    margin: auto;
+  }
+}
+
+div {
+  &.header {
+    display: flex;
+    position: relative;
+    gap: 2rem;
+    > .logo {
+      height: 150px;
+      width: 150px;
+      background-color: lightseagreen;
+      border-radius: 100px;
+      border: 10px solid rgb(49, 49, 49);
+    }
+    > .change-photo {
+      position: absolute;
+      top: 115px;
+      left: 125px;
+      &:hover {
+        cursor: pointer;
+      }
+      > i {
+        border: 8px solid rgba(255, 255, 255, 0.075);
+        border-radius: 100px;
+        background-color: rgba(255, 255, 255, 0.075);
+      }
+    }
+    > .name {
+      align-self: flex-end;
+      font-size: x-large;
+      font-weight: bold;
+    }
+  }
+  &.nav {
+    background-color: rgb(49, 49, 49);
+    margin-top: 1rem;
+    border-radius: 10px;
+    > .box.menu {
+      display: flex;
+      justify-content: space-between;
+      > .buttons {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 1rem;
+        button {
+          background-color: rgb(67, 67, 67);
+          border: none;
+          border-radius: 5px;
+          color: white;
+          padding: 0.5rem;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      > .menu-list {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        gap: 2rem;
+        a {
+          color: lightgrey;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &.container {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    > .left {
+      background-color: rgb(49, 49, 49);
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      grid-column: span 2;
+      position: relative;
+      > .box {
+        > .photos {
+          display: grid;
+          grid-template-columns: repeat(3, auto);
+          gap: 0.5rem;
+          > .photo {
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            span {
+              display: none;
+              &:hover {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .footer {
+        ul {
+          position: absolute;
+          display: flex;
+          list-style: none;
+          gap: 1rem;
+          left: -2rem;
+          bottom: -3rem;
+          font-size: small;
+        }
+      }
+    }
+    > .right {
+      border-radius: 10px;
+      grid-column: span 3;
+      grid-row: span 3;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .box {
+        background-color: rgb(49, 49, 49);
+        padding: 1rem 0rem;
+        border-radius: 10px;
+        p {
+          padding: 0 2rem;
+        }
+        h3 {
+          padding: 0 2rem;
+          color: white;
+        }
+        a {
+          padding: 0 2rem;
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+        }
+        .photos {
+          display: flex;
+          gap: 0.2rem;
+          flex-wrap: wrap;
+          .photo {
+            height: 25vh;
+            background-color: lightgrey;
+            flex-grow: 1;
+            flex-basis: 30%;
+          }
+        }
+        &:last-child {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+}
+

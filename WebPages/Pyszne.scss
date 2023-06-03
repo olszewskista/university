@@ -1,0 +1,186 @@
+$primary-color: #fb6100;
+$type-section-background: #f8f5f2;
+$type-section-background-2: #d7d7d7;
+$item-colors: #e1bbbb, #e1c6bb, #eeeccc, #d7e1bb, #bbe1ca, #bbdce1, #bcbbe1, #d9bbe1, #e1bbbb, #e1c6bb, #eeeccc;
+
+$counter: 2;
+@each $color in $item-colors {
+    .item:nth-child(#{$counter}) {
+        .pic {
+            background-color: #{$color};
+        }
+    }
+    $counter: $counter + 1
+}
+
+body {
+    margin: 0;
+    font-family: BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    color: white;
+    .logo {
+        margin: 1rem 1rem;
+        font-size: x-large;
+        :first-child {
+            font-weight: bold;
+        }
+    }
+    .address {
+        text-decoration: underline;
+        text-underline-offset: 0.3rem;
+        letter-spacing: 0.3rem;
+    }
+    button {
+        margin: 1rem 1rem;
+        background-color: $primary-color;
+        color: white;
+        border: none;
+    }
+}
+
+div {
+    &.type-section {
+        display: flex;
+        justify-content: center;
+        background-color: $type-section-background;
+        border-bottom: 2px lightgrey solid;
+        .buttons {
+            background-color: $type-section-background;
+            button {
+                background-color: $type-section-background;
+                border: none;
+                padding: 1rem 5rem;
+                &.active {
+                    border-bottom: 2px solid $primary-color;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    &.category-section {
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: white;
+            border: none;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            &.active {
+                background-color: $primary-color;
+                color: white;
+            }
+            &:last-child {
+                color: $primary-color;
+                font-weight: bold;
+            }
+        }
+    }
+    &.main-section {
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        justify-content: center;
+        .left-main-section {
+            flex-basis: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .header {
+                font-weight: bold;
+            }
+            > div {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        .right-main-section {
+            flex-basis: 70%;
+            .search {
+                display: flex;
+                input {
+                    flex-basis: 100%;
+                    padding: 1rem 1rem;
+                }
+                button {
+                    background-color: white;
+                    border: none;
+                    margin-left: 1rem;
+                }
+            }
+            .header {
+                font-weight: bold;
+                margin-top: 1rem;
+                font-size: large;
+            }
+            > :nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .item {
+                border: 2px solid grey;
+                display: flex;
+                position: relative;
+                gap: 4rem;
+                .pic {
+                    // min-width: 275px;
+                    flex-basis: 300px;
+                    flex-grow: 1;
+                    // flex-shrink: 1;
+                    // background-color: lightblsue;
+                }
+                .logo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    background-color: white;
+                    padding: 30px;
+                    aspect-ratio: 1/1;
+                    border-radius: 300px;
+                    left: 25%;
+                    top: 15%;
+                    transform: rotate(-10deg);
+                    color: #fb6100;
+                    font-weight: bold;
+                }
+                .info {
+                    flex-basis: 70%;
+                    .header {
+                        margin-top: 1rem;
+                        font-size: 150%;
+                        font-weight: bold;
+                        color: lightslategrey;
+                    }
+                    .content {
+                        display: flex;
+                        margin-top: 2rem;
+                        margin-bottom: 3rem;
+                        gap: 2rem;
+                        .star {
+                            color: #fb6100;
+                            span {
+                                color: black;
+                            }
+                        }
+                        * {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
